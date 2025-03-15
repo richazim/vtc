@@ -23,3 +23,58 @@ body {
   background: white;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/*Website Horizontal Padding*/
+.v-padding{
+  padding: 0 80px;
+}
+
+/*Website Nav Menu Button*/
+.header-button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-yellow);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-burger{
+  width: 100%;
+}
+
+.header-burger::before,
+.header-burger::after{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 40%;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.header-burger::before{
+  top: 5px;
+}
+
+.header-burger::after{
+  top: -5px;
+}
+
+.header-burgerActive{
+
+}
+
+.header-burgerActive::before{
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header-burgerActive::after{
+  transform: rotate(45deg);
+  top: -1px;
+}
