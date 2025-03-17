@@ -1,17 +1,18 @@
-import Welcome from "@/pages/Welcome";
+
 import HomeNav from "@/components/HomeNav";
 import SafeArea from "@/components/SafeArea";
-import About from "@/pages/About";
 import Services from "@/pages/Services";
+import WelcomeAndAbout from "@/pages/WelcomeAndAbout";
+import Contact from "@/pages/Contact";
 
 
 export default function Home() {
   return (
     <SafeArea>
         <HomeNav/>
-        <Welcome/>
-        <About/>
+        <WelcomeAndAbout/>
         <Services/>
+        <Contact/>
     </SafeArea>
   );
 }
