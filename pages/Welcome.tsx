@@ -7,7 +7,7 @@ import HomeRotatingText from "@/components/HomeRotatingText";
 const Home = () => {
     return (
         <header className="w-full h-screen flex flex-row overflow-hidden">
-            <section className="lg:w-[50%] lg:flex hidden lg:flex-row lg:items-center bg-[#F7F4ED]">
+            <section className="lg:w-[50%] lg:flex hidden lg:flex-row lg:items-center -z-10 bg-[#F7F4ED]">
                 {/*<p className="text-[50px] font-bold">VTC SANS LIMITE</p>*/}
                 <HomeRotatingText/>
             </section>
