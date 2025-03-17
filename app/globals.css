@@ -29,6 +29,10 @@ body {
   @apply md:px-[80px] px-[20px];
 }
 
+.h-margin-left{
+  @apply md:ml-[80px] ml-[20px];
+}
+
 /*Website Nav Menu Button*/
 .header-button{
   width: 50px;
@@ -147,4 +151,9 @@ body {
   height: 100%;
   fill: rgb(41, 41, 41);
   stroke: none;
+}
+
+/*Rotating Words */
+.rotating-word:nth-of-type(2n-1){
+  color: var(--color-yellow);
 }
