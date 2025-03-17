@@ -1,4 +1,5 @@
 "use client";
+import ManPicture from "@/public/assets/images/image1.jpg"
 
 import Image from "next/image";
 import HomeRotatingText from "@/components/HomeRotatingText";
@@ -12,7 +13,7 @@ const Home = () => {
             </section>
 
             <section className="relative h-screen w-screen lg:w-[50%] -z-10 bg-origin-border">
-                <Image src="/assets/images/image1.jpg" alt="" width={4159} height={6239} style={{
+                <Image src={ManPicture} priority alt="" width={4159} height={6239} placeholder={"blur"} style={{
                     objectFit: 'cover',
                     height: '100%',
                 }} />
