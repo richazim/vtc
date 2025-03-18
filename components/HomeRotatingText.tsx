@@ -2,7 +2,7 @@
 import {useEffect, useRef} from "react";
 import { gsap } from "gsap";
 
-export default function HeroSection() {
+export default function HomeRotatingText() {
     const containerRef = useRef<HTMLDivElement>(null);
     const wordsRef = useRef<HTMLDivElement[]>([]);
 
