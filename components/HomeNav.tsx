@@ -2,16 +2,33 @@
 import Link from "next/link";
 import {AnimatePresence} from "framer-motion";
 import MobileNav from "@/components/MobileNav";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {HomeNavItems} from "@/constants";
 
 const HomeNav = () => {
     const [isActive, setIsActive] = useState(false);
 
+    useEffect(() => {
+        window.addEventListener('scroll', isSticky);
+        return () => {
+            window.removeEventListener('scroll', isSticky);
+        };
+    });
+
+    const isSticky = () => {
+        const header = document.querySelector('.header-section');
+        const scrollTop = window.scrollY;
+        if(scrollTop >= 50){
+            header?.classList.add('is-sticky')
+        }else{
+            header?.classList.remove('is-sticky')
+        }
+    };
+
     return (
         <div className="fixed top-0 left-0 w-screen flex flex-row justify-center z-10">
             <div className="absolute 2xl:w-[1280px] w-screen">
-                <div className="flex flex-row justify-between items-center h-[70px] h-padding relative">
+                <div className="header-section flex flex-row justify-between items-center nav-height h-padding relative">
 
                     <div className="logo relative font-bold">
                         <span className="after:content-[''] after:absolute after:w-[5px] after:h-[5px] after:bg-yellow after:bottom-[5px] after:rounded-full">MrVTC</span>

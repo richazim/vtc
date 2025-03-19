@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MrVTC",
+  title: "MrVTC, Chauffeur VTC Privée",
   description: "MrVTC, Votre Service Vts, ....",
 };
 

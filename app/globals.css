@@ -5,6 +5,8 @@
   /*--font-mono: var(--font-geist-mono);*/
   --color-yellow: #FFC108;
   --color-gray: #F7F4ED;
+  --nav-height: 70px;
+  --nav-height-for-padding: 80px;
 }
 
 :root {
@@ -32,6 +34,20 @@ body {
 
 .h-margin-left{
   @apply md:ml-[80px] ml-[20px];
+}
+
+/* Website Header Nav */
+.nav-height{
+  height: var(--nav-height);
+  transition: background 0.2s;
+}
+
+.padding-top-nav{
+  padding-top: var(--nav-height-for-padding);
+}
+
+.is-sticky{
+  background: var(--color-gray);
 }
 
 /*Website Nav Menu Button*/
