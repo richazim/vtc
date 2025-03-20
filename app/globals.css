@@ -46,6 +46,10 @@ body {
   padding-top: var(--nav-height-for-padding);
 }
 
+.padding-bottom-nav{
+  padding-bottom: var(--nav-height-for-padding);
+}
+
 .is-sticky{
   background: var(--color-gray);
 }
