@@ -31,11 +31,11 @@ const About = () => {
                     {/*<p>À Propos</p>*/}
                     <h2 className="text-center text-5xl text-yellow font-bold">Qui suis-je?</h2>
                     <div className="h-padding  flex flex-col gap-[15px] text-gray text-[15px]">
-                        <p>Chauffeur vtc privée basé à Angers Passionné par mon métier, je mets mon expérience et mon professionnalisme à votre service pour vous garantir des trajets confortables, sécurisés et agréables.</p>
-                        <p>Fort d’une solide connaissance des routes angevines et des environs, je vous assure une prise en charge ponctuelle et un itinéraire optimisé pour vos déplacements personnels ou professionnels.</p>
-                        <p>Que ce soit pour un transfert vers une gare, un aéroport ou un rendez-vous important, je veille à ce que votre voyage soit serein et sans encombre.</p>
-                        <p>Mon véhicule, soigneusement entretenu et équipé pour votre confort, vous offre une expérience de transport haut de gamme. À bord, vous trouverez divers services à votre disposition : rafraîchissements, chargeurs, connexion Wi-Fi et bien plus encore pour rendre votre trajet des plus agréables.</p>
-                        <p>Ma priorité ? Votre satisfaction et votre tranquillité d’esprit. Disponibilité, discrétion et courtoisie sont les maîtres-mots de mon engagement envers vous. Réservez votre course dès maintenant et laissez-moi vous conduire en toute sérénité.</p>
+                        <p className="bg-gray text-black p-[10px]">Chauffeur vtc privée basé à Angers Passionné par mon métier, je mets mon expérience et mon professionnalisme à votre service pour vous garantir des trajets confortables, sécurisés et agréables.</p>
+                        <p className="bg-gray text-black p-[10px]">Fort d’une solide connaissance des routes angevines et des environs, je vous assure une prise en charge ponctuelle et un itinéraire optimisé pour vos déplacements personnels ou professionnels.</p>
+                        <p className="bg-gray text-black p-[10px]">Que ce soit pour un transfert vers une gare, un aéroport ou un rendez-vous important, je veille à ce que votre voyage soit serein et sans encombre.</p>
+                        <p className="bg-gray text-black p-[10px]">Mon véhicule, soigneusement entretenu et équipé pour votre confort, vous offre une expérience de transport haut de gamme. À bord, vous trouverez divers services à votre disposition : rafraîchissements, chargeurs, connexion Wi-Fi et bien plus encore pour rendre votre trajet des plus agréables.</p>
+                        <p className="bg-gray text-black p-[10px]">Ma priorité ? Votre satisfaction et votre tranquillité d’esprit. Disponibilité, discrétion et courtoisie sont les maîtres-mots de mon engagement envers vous. Réservez votre course dès maintenant et laissez-moi vous conduire en toute sérénité.</p>
                     </div>
 
                     <SocialMedias/>
