@@ -1,9 +1,31 @@
 "use client"
 import Link from "next/link";
-import {AnimatePresence} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import MobileNav from "@/components/MobileNav";
 import {useEffect, useState} from "react";
 import {HomeNavItems} from "@/constants";
+
+const backgroundVariant = {
+    initial: {
+        backgroundColor: "transparent",
+    },
+    hover: {
+        backgroundColor: "#FFC108",
+        transition: {
+            delay: 0.1,
+            duration: 0.5,
+            ease: [0.19, 1, 0.22, 1],
+        },
+    },
+    animate: {
+        backgroundColor: "transparent",
+        transition: {
+            delay: 0.1,
+            duration: 0.5,
+            ease: [0.19, 1, 0.22, 1],
+        },
+    },
+};
 
 const HomeNav = () => {
     const [isActive, setIsActive] = useState(false);
@@ -37,8 +59,16 @@ const HomeNav = () => {
                     <div className="links xl:flex flex-row justify-between items-center w-[60%] hidden">
                         {
                             HomeNavItems.map((item, index) => (
-                                <Link key={index} href={item.link} className="py-[5px] px-[20px] mx-[20px] rounded-full hover:bg-yellow hover:text-white">
-                                    <span>{item.title}</span>
+                                <Link key={index} href={item.link}>
+                                    <motion.div
+                                        initial="initial"
+                                        whileHover="hover"
+                                        animate="animate"
+                                        variants={backgroundVariant}
+                                        className="py-[5px] px-[20px] mx-[20px] rounded-full"
+                                    >
+                                        <span className="font-bold">{item.title}</span>
+                                    </motion.div>
                                 </Link>
                             ))
                         }
