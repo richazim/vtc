@@ -1,0 +1,46 @@
+"use client";
+import Form from 'next/form'
+
+const ContactForm = ({containerStyle} : {containerStyle?: string}) => {
+ return (
+  <Form action="/" className={`${containerStyle} border p-[10px]`}>
+      <h5 className="font-bold text-center">M’envoyer directement un message</h5>
+
+      <div className="my-[20px]">
+          <div className="inputs-container grid grid-rows-3 gap-[30px] p-[20px]">
+              <div className="input1">
+                  <label htmlFor="name">Nom (requis)</label>
+                  <div className="border">
+                      <input id="name" name="name" placeholder="Votre Nom..." type="text" className="w-full h-full p-[10px]"/>
+                  </div>
+              </div>
+
+              <div className="input2">
+                  <label htmlFor="email">Email (requis)</label>
+                  <div className="border">
+                      <input id="email" name="email" placeholder="Email..." type="text" className="w-full h-full p-[10px]"/>
+                  </div>
+              </div>
+
+              <div className="input3 row-start-3 row-end-4">
+                  <label htmlFor="subject">Sujet (requis)</label>
+                  <div className="border">
+                      <input id="subject" name="subject" placeholder="Sujet du message" type="text" className="w-full h-full p-[10px]"/>
+                  </div>
+              </div>
+
+              <div className="input4 row-start-1 row-end-4">
+                  <label htmlFor="message">Message (requis)</label>
+                  <div className="border">
+                      <textarea id="message" name="message" placeholder="Message..." rows={9} className="resize-none w-full h-full p-[10px]"/>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <button type="submit" className="w-full p-[10px] border">Submit</button>
+  </Form>
+ );
+};
+
+export default ContactForm;

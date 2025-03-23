@@ -4,6 +4,7 @@ import Services from "@/pages/Services";
 import WelcomeAndAbout from "@/pages/WelcomeAndAbout";
 import Contact from "@/pages/Contact";
 import Testimonies from "@/pages/Testimonies";
+import Terms from "@/pages/Terms";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <Services/>
         <Testimonies/>
         <Contact/>
+        <Terms/>
     </SafeArea>
   );
 }
