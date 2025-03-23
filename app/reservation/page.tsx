@@ -1,7 +1,16 @@
+import SafeArea from "@/components/SafeArea";
+import HomeNav from "@/components/HomeNav";
+import Terms from "@/pages/Terms";
+import Reservation from "@/pages/Reservation";
+
 const Page = () => {
     return (
-        <div id="reservation" className="h-screen flex justify-center items-center text-9xl font-bold">
-            <p>Reservation</p>
+        <div id="reservation">
+            <SafeArea>
+                <HomeNav/>
+                <Reservation/>
+                <Terms/>
+            </SafeArea>
         </div>
     );
 };

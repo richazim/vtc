@@ -11,7 +11,7 @@ const Contact = () => {
             <p className="text-center font-light">Besoin d’un renseignement ou d’un devis ? </p>
             <p className="text-center pb-[40px]">Je suis à votre disposition.</p>
 
-            <div className="grid grid-cols-3 gap-x-[70px] gap-y-[20px]">
+            <div className="grid grid-cols-3 gap-x-[70px] gap-y-[20px] mb-[50px]">
                 <ContactForm containerStyle="row-span-2 col-span-2" />
                 <ContactAddress/>
                 <LocationMap/>

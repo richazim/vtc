@@ -2,7 +2,7 @@
 
 const Terms = () => {
     return (
-        <div className="mt-[50px] h-[70px] flex lg:flex-row pt-[10px] lg:pt-0 flex-col items-center justify-between h-padding bg-[#00171f] text-white text-[12px]">
+        <div className="h-[70px] flex lg:flex-row pt-[10px] lg:pt-0 flex-col items-center justify-between h-padding bg-[#00171f] text-white text-[12px]">
             <p className="">
                 <span>
                     © Copyright - 2025 - Site réalisé par 
