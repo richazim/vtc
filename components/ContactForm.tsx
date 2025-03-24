@@ -7,7 +7,7 @@ const ContactForm = ({containerStyle} : {containerStyle?: string}) => {
       <h5 className="font-bold text-center">M’envoyer directement un message</h5>
 
       <div className="my-[20px]">
-          <div className="inputs-container grid grid-rows-3 gap-[30px] p-[20px]">
+          <div className="inputs-container sm:grid sm:grid-rows-3 grid-rows-4  sm:gap-[30px] p-[20px]">
               <div className="input1">
                   <label htmlFor="name">Nom (requis)</label>
                   <div className="border">
@@ -22,14 +22,14 @@ const ContactForm = ({containerStyle} : {containerStyle?: string}) => {
                   </div>
               </div>
 
-              <div className="input3 row-start-3 row-end-4">
+              <div className="input3 sm:row-start-3 sm:row-end-4">
                   <label htmlFor="subject">Sujet (requis)</label>
                   <div className="border">
                       <input id="subject" name="subject" placeholder="Sujet du message" type="text" className="w-full h-full p-[10px]"/>
                   </div>
               </div>
 
-              <div className="input4 row-start-1 row-end-4">
+              <div className="input4 sm:row-start-1 sm:row-end-4">
                   <label htmlFor="message">Message (requis)</label>
                   <div className="border">
                       <textarea id="message" name="message" placeholder="Message..." rows={9} className="resize-none w-full h-full p-[10px]"/>

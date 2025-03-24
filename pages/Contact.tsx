@@ -7,12 +7,12 @@ import LocationMap from "@/components/LocationMap";
 const Contact = () => {
     return (
         <div id="contact" className="padding-top-nav h-padding">
-            <h2 className="text-[128px] font-bold text-center text-yellow">Me Contacter</h2>
+            <h2 className="lg:text-[128px] sm:text-[90px] text-[50px] font-bold text-center text-yellow">Me Contacter</h2>
             <p className="text-center font-light">Besoin d’un renseignement ou d’un devis ? </p>
             <p className="text-center pb-[40px]">Je suis à votre disposition.</p>
 
-            <div className="grid grid-cols-3 gap-x-[70px] gap-y-[20px] mb-[50px]">
-                <ContactForm containerStyle="row-span-2 col-span-2" />
+            <div className="grid lg:grid-cols-3 grid-col-1 gap-x-[70px] gap-y-[20px] mb-[50px]">
+                <ContactForm containerStyle="lg:row-span-2 lg:col-span-2" />
                 <ContactAddress/>
                 <LocationMap/>
             </div>
