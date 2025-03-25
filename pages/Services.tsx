@@ -18,7 +18,7 @@ const services = [
 const Services = () => {
     return (
         <div id="services" className="padding-top-nav">
-            <h2 className="lg:text-[120px] text-[70px] font-bold text-center text-yellow">Services</h2>
+            <h2 className="lg:text-[128px] sm:text-[90px] text-[50px] font-bold text-center text-yellow">Services</h2>
 
             <div className="h-padding flex flex-col gap-[20px]">
                 <ParagraphTag title={services[0].title} paragraph={services[0].paragraph}/>
