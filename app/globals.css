@@ -27,6 +27,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/*Smooth Scrolling*/
+* {
+  scroll-behavior: smooth;
+}
+
 /*Website Horizontal Padding*/
 .h-padding{
   @apply md:px-[80px] px-[20px];
