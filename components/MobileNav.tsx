@@ -19,19 +19,21 @@ const MobileNav = () => {
     return (
         <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className='nav-menu -z-10'>
             <div className='nav-body'>
-
                 <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className='nav-nav '>
+
                     <div className='nav-header'>
                         <p>Menu</p>
                     </div>
+
                     {
                         HomeNavItems.map( (data, index) => {
                             return <CustomizedLink key={index} data={{...data, index}} isActive={selectedIndicator == data.link} setSelectedIndicator={setSelectedIndicator}></CustomizedLink>
                         })
                     }
-                </div>
 
+                </div>
             </div>
+
             <Curve />
         </motion.div>
     );

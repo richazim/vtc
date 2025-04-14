@@ -1,16 +1,20 @@
 "use client"
 
+import Link from "next/link";
+
 const Terms = () => {
     return (
-        <div className="flex lg:flex-row flex-col gap-3 py-[30px] lg:py-[20px] items-center justify-between h-padding bg-[#00171f] text-white text-[12px]">
+        <div className="section flex lg:flex-row flex-col gap-3 py-[30px] lg:py-[20px] items-center justify-between h-padding bg-[#00171f] text-white text-[12px]">
             <p className="">
                 <span>
                     © Copyright - 2025 - Site réalisé par 
                 </span>
 
-                <span className="border rounded-[7px] p-[5px]">
-                    Azim et Badjo
-                </span>
+                <Link href="https://www.linkedin.com/in/azimsaibou" target="_blank">
+                    <span className="border rounded-[5px] py-[2px] px-[4px]">
+                        Azim
+                    </span>
+                </Link>
             </p>
 
             <div className="flex flex-row gap-[20px]">

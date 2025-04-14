@@ -1,7 +1,7 @@
 import SafeArea from "@/components/SafeArea";
 import HomeNav from "@/components/HomeNav";
-import Terms from "@/pages/Terms";
-import Reservation from "@/pages/Reservation";
+import Terms from "@/sections/Terms";
+import Reservation from "@/sections/Reservation";
 
 const Page = () => {
     return (

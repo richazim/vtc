@@ -1,7 +1,7 @@
 export const HomeNavItems = [
     {
         title: "Accueil",
-        link: "/",
+        link: "#welcome",
     },
     {
         title: "À Propos",

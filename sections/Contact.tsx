@@ -6,7 +6,7 @@ import LocationMap from "@/components/LocationMap";
 
 const Contact = () => {
     return (
-        <div id="contact" className="padding-top-nav h-padding">
+        <div id="contact" className="section padding-top-nav h-padding">
             <h2 className="lg:text-[128px] sm:text-[90px] text-[50px] font-bold text-center text-yellow">Me Contacter</h2>
             <p className="text-center font-light">Besoin d’un renseignement ou d’un devis ? </p>
             <p className="text-center pb-[40px]">Je suis à votre disposition.</p>

@@ -1,26 +1,13 @@
 "use client";
-import { useEffect, useRef } from "react";
-import {gsap} from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ManPicture from "@/public/assets/images/image1.jpg";
 import Image from "next/image";
 import SocialMedias from "@/components/SocialMedias";
 
 const About = () => {
-    const aboutRef = useRef(null);
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.fromTo(
-            aboutRef.current,
-            { scale: 0.8, rotate: 5 },
-            { scale: 1, rotate: 0, scrollTrigger: { trigger: aboutRef.current, start: "top bottom", end: "top center", scrub: true } }
-        );
-    }, []);
 
     return (
-        <div ref={aboutRef} id="about" className="w-screen h-padding padding-top-nav padding-bottom-nav overflow-hidden bg-black">
+        <div id="about" className="section w-screen h-padding padding-top-nav padding-bottom-nav overflow-hidden bg-black">
 
             <div className="flex lg:flex-row flex-col gap-[30px] lg:gap-0">
                 <section className="lg:w-[50%] w-full">

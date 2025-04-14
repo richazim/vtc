@@ -1,5 +1,18 @@
 "use client";
 import Form from 'next/form'
+import {motion} from "framer-motion";
+
+const backgroundVariant = {
+    hover: {
+        backgroundColor: "#FFC108",
+        transition: {
+            delay: 0.1,
+            duration: 0.5,
+            ease: [0.19, 1, 0.22, 1],
+        },
+    }
+};
+
 
 const ContactForm = ({containerStyle} : {containerStyle?: string}) => {
  return (
@@ -38,7 +51,7 @@ const ContactForm = ({containerStyle} : {containerStyle?: string}) => {
           </div>
       </div>
 
-      <button type="submit" className="w-full p-[10px] border">Submit</button>
+      <motion.button type="submit" className="w-full p-[10px] border cursor-pointer" variants={backgroundVariant} whileHover="hover">Submit</motion.button>
   </Form>
  );
 };
