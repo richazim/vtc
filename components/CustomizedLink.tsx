@@ -23,7 +23,7 @@ export default function CustomizedLink({data, isActive, setSelectedIndicator}) {
     return (
         <motion.div className='link' onMouseEnter={() => {setSelectedIndicator(link)}} custom={index} variants={slide} initial="initial" animate="enter" exit="exit">
             <motion.div variants={scale} animate={isActive ? "open" : "closed"} className='link-indicator'></motion.div>
-            <Link href={link}>{title}</Link>
+            <Link href={`/${link}`}>{title}</Link>
         </motion.div>
     )
 }

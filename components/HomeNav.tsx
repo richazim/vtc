@@ -8,6 +8,7 @@ import {HomeNavItems} from "@/constants";
 const backgroundVariant = {
     hover: {
         backgroundColor: "#FFC108",
+        color: "#FFF",
         transition: {
             delay: 0.1,
             duration: 0.5,
@@ -49,7 +50,7 @@ const HomeNav = () => {
                     <div className="links xl:flex flex-row justify-between items-center w-[60%] hidden">
                         {
                             HomeNavItems.map((item, index) => (
-                                <Link key={index} href={`${item.link}`} className="anchor-link">
+                                <Link key={index} href={`/${item.link}`} className="anchor-link">
                                     <motion.div
                                         whileHover="hover"
                                         variants={backgroundVariant}

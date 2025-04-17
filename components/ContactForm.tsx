@@ -5,11 +5,16 @@ import {motion} from "framer-motion";
 const backgroundVariant = {
     hover: {
         backgroundColor: "#FFC108",
+        color: "#FFF",
         transition: {
             delay: 0.1,
             duration: 0.5,
             ease: [0.19, 1, 0.22, 1],
         },
+    },
+    initial:{
+        backgroundColor: "#FFC108",
+        color: "#000"
     }
 };
 
@@ -51,7 +56,7 @@ const ContactForm = ({containerStyle} : {containerStyle?: string}) => {
           </div>
       </div>
 
-      <motion.button type="submit" className="w-full p-[10px] border cursor-pointer" variants={backgroundVariant} whileHover="hover">Submit</motion.button>
+      <motion.button type="submit" className="w-full p-[10px] border cursor-pointer font-bold" variants={backgroundVariant} initial="initial" whileHover="hover">Submit</motion.button>
   </Form>
  );
 };
