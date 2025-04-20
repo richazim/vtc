@@ -8,7 +8,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 
-const ReservationInput = ({placeholder, items} : {placeholder: string, items: string[]}) => {
+const ReservationInput = ({placeholder, items} : {placeholder: string, items: any}) => {
     return (
         <Select>
             <SelectTrigger className="w-full">
@@ -17,7 +17,7 @@ const ReservationInput = ({placeholder, items} : {placeholder: string, items: st
             <SelectContent>
                 {
                     items.map((item, id) => (
-                        <SelectItem value={item} key={id}>{item}</SelectItem>
+                        <SelectItem value={item.value} key={id}>{item.item}</SelectItem>
                     ))
                 }
             </SelectContent>

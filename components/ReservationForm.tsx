@@ -2,6 +2,8 @@
 
 import ReservationInput from "@/components/ReservationInput";
 import {motion} from "framer-motion";
+import DepartureCityInput from "./DepartureCityInput";
+import DateInput from "./DateInput";
 
 const fruits = [
     "apple",
@@ -10,6 +12,59 @@ const fruits = [
     "grapes",
     "pineapple",
 ]
+const vehicleTypes =
+    {
+        placeholder: "Type de véhicule",
+        items: [
+            {
+                value: "berline",
+                item: "Berline",
+            },
+            {
+                value: "SUV",
+                item: "SUV",
+            },
+            {
+                value: "Vans",
+                item: "Vans",
+            }
+        ]
+    }
+
+const passengerTypes =
+    {
+        placeholder: "Nombre de passagers",
+        items: [
+            {
+                value: "zero",
+                item: 0,
+            },
+            {
+                value: "one",
+                item: 1,
+            },
+            {
+                value: "two",
+                item: 2,
+            }
+        ]
+    }
+
+const waysTypes =
+    {
+        placeholder: "Allez-simple ou aller-retour",
+        items: [
+            {
+                value: "one_way",
+                item: "Allez-simple",
+            },
+            {
+                value: "Allez-retour",
+                item: "Round Trip",
+            }
+        ]
+    }
+    
 const backgroundVariant = {
     hover: {
         backgroundColor: "#FFC108",
@@ -34,19 +89,19 @@ const ReservationForm = ({step, setStep, width}: {step: number, setStep: React.D
               case 1:
                   return (
                       <>
-                          <ReservationInput placeholder="Select a fruit" items={fruits}/>
+                          <ReservationInput placeholder={vehicleTypes.placeholder} items={vehicleTypes.items}/>
 
-                          <ReservationInput placeholder="Select a fruit" items={fruits}/>
+                          <ReservationInput placeholder={passengerTypes.placeholder} items={passengerTypes.items}/>
 
-                          <ReservationInput placeholder="Select a fruit" items={fruits}/>
+                          <ReservationInput placeholder={waysTypes.placeholder} items={waysTypes.items}/>
 
-                          <ReservationInput placeholder="Select a fruit" items={fruits}/>
+                          <DepartureCityInput placeholder="Lieu de départ"/>
 
-                          <ReservationInput placeholder="Select a fruit" items={fruits}/>
+                          <DepartureCityInput placeholder="Lieu d'arrivée"/>
 
                           <div className="flex flex-row justify-between gap-[20px]">
-                              <ReservationInput placeholder="Select a fruit" items={fruits}/>
-                              <ReservationInput placeholder="Select a fruit" items={fruits}/>
+                              <DateInput/>
+                              <DateInput/>
                           </div>
                       </>
                   )
