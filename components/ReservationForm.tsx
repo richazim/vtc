@@ -3,7 +3,7 @@
 import ReservationInput from "@/components/ReservationInput";
 import {motion} from "framer-motion";
 import DepartureCityInput from "./DepartureCityInput";
-import DateInput from "./DateInput";
+import DatePicker from "./DatePicker";
 
 const fruits = [
     "apple",
@@ -82,6 +82,11 @@ const backgroundVariant = {
 };
 
 const ReservationForm = ({step, setStep, width}: {step: number, setStep: React.Dispatch<React.SetStateAction<number>>, width: number}) => {
+
+
+    const submit = () => {
+        setStep(step + 1);
+    }
  return (
   <form className="border flex flex-col gap-[20px]" style={{width: width}}>
       {(function(){
@@ -100,8 +105,8 @@ const ReservationForm = ({step, setStep, width}: {step: number, setStep: React.D
                           <DepartureCityInput placeholder="Lieu d'arrivée"/>
 
                           <div className="flex flex-row justify-between gap-[20px]">
-                              <DateInput/>
-                              <DateInput/>
+                              <DatePicker placeholder="Date de départ"/>
+                              <DatePicker placeholder="Date de retour"/>
                           </div>
                       </>
                   )
@@ -122,7 +127,7 @@ const ReservationForm = ({step, setStep, width}: {step: number, setStep: React.D
           }
       })()}
 
-      <motion.button type="submit" className="w-full p-[10px] border cursor-pointer font-bold" variants={backgroundVariant} initial="initial" whileHover="hover">Submit</motion.button>
+      <motion.button type="submit" className="w-full p-[10px] border cursor-pointer font-bold" variants={backgroundVariant} initial="initial" whileHover="hover" onClick={submit}>Submit</motion.button>
   </form>
  );
 };
