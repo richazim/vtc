@@ -38,7 +38,7 @@ export default function DepartureCityInput({placeholder}: {placeholder?: string}
     setSuggestions([]);
   };
 
-  const handleOutOfFocus = (e) => {
+  const handleOutOfFocus = () => {
     setSuggestions([]);
   }
 

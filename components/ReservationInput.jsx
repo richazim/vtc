@@ -8,7 +8,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 
-const ReservationInput = ({placeholder, items} : {placeholder: string, items: any}) => {
+const ReservationInput = ({placeholder, items}) => {
     return (
         <Select>
             <SelectTrigger className="w-full">
