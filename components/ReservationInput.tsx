@@ -9,11 +9,13 @@ import {
 } from "@/components/ui/select"
 
 const ReservationInput = ({placeholder, items}) => {
+
     return (
         <Select>
             <SelectTrigger className="w-full">
                 <SelectValue placeholder={placeholder} />
             </SelectTrigger>
+            
             <SelectContent>
                 {
                     items.map((item, id) => (
