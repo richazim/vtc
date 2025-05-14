@@ -1,22 +1,7 @@
 import Image from "next/image";
 import {useRef} from "react";
 
-const TIMELINE_POINTS = [
-    {
-        url: "/assets/icons/planning.svg",
-        id: 1
-    },
-    {
-        url: "/assets/icons/reservation.svg",
-        id: 2
-    },
-    {
-        url: "/assets/icons/reservation.svg",
-        id: 3
-    }
-]
-
-const ReservationTimeline = ({active, width} : {active: number, width: number}) => {
+const ReservationTimeline = ({width} : {active: number, width: number}) => {
     const timelineRef = useRef(null);
 
 

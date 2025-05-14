@@ -46,14 +46,14 @@ export default function Root() {
 
         gsap.ticker.lagSmoothing(0);
 
+        gsap.registerPlugin(ScrollTrigger); // Enregistrer ScrollTrigger avant de l'utiliser
+
         ScrollTrigger.create({
             trigger: containerRef.current,
             start: "top top",
             end: "bottom bottom",
             scrub: true,
         });
-
-        gsap.registerPlugin(ScrollTrigger);
 
         return () => {
             anchors.forEach(anchor => anchor.removeEventListener("click", handleClick));
