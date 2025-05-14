@@ -3,7 +3,6 @@
 import ReservationInput from "@/components/ReservationInput";
 import {motion} from "framer-motion";
 import DepartureCityInput from "./DepartureCityInput";
-import DatePicker from "./DatePicker";
 
 const fruits = [
     "apple",
@@ -105,8 +104,8 @@ const ReservationForm = ({step, setStep, width}: {step: number, setStep: React.D
                           <DepartureCityInput placeholder="Lieu d'arrivée"/>
 
                           <div className="flex flex-row justify-between gap-[20px]">
-                              <DatePicker placeholder="Date de départ"/>
-                              <DatePicker placeholder="Date de retour"/>
+                              <div>Pick date</div>
+                              <div>Pick date</div>
                           </div>
                       </>
                   )
