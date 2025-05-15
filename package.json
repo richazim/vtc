@@ -39,6 +39,8 @@
     "typescript": "^5"
   },
   "overrides": {
-    "react-multistep/react": "^19.0.0"
+    "react-multistep": {
+      "react": "^19.0.0"
+    }
   }
 }
