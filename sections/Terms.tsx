@@ -1,8 +1,8 @@
 "use client"
-
 import Link from "next/link";
 
 const Terms = () => {
+
     return (
         <div className="section flex lg:flex-row flex-col gap-3 py-[30px] lg:py-[20px] items-center justify-between h-padding bg-[#00171f] text-white text-[12px]">
             <p className="">

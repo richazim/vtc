@@ -1,8 +1,7 @@
-"use client";
-
 import Image from "next/image";
 
 const ContactAddress = () => {
+
  return (
   <div className="w-full flex flex-col gap-[20px] border p-[10px]">
       <div className="text-center font-bold text-2xl">

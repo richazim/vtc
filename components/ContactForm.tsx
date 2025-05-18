@@ -1,25 +1,13 @@
-"use client";
 import Form from 'next/form'
 import {motion} from "framer-motion";
+import { buttonBackgroundVariant } from '@/lib/motion/color_switch';
 
-const backgroundVariant = {
-    hover: {
-        backgroundColor: "#FFC108",
-        color: "#FFF",
-        transition: {
-            delay: 0.1,
-            duration: 0.5,
-            ease: [0.19, 1, 0.22, 1],
-        },
-    },
-    initial:{
-        backgroundColor: "#FFC108",
-        color: "#000"
-    }
-};
+interface ContactFormProps {
+    containerStyle?: string
+}
 
+const ContactForm = ({containerStyle} : ContactFormProps) => {
 
-const ContactForm = ({containerStyle} : {containerStyle?: string}) => {
  return (
   <Form action="/" className={`${containerStyle} border p-[10px]`}>
       <h5 className="font-bold text-center">M’envoyer directement un message</h5>
@@ -56,7 +44,7 @@ const ContactForm = ({containerStyle} : {containerStyle?: string}) => {
           </div>
       </div>
 
-      <motion.button type="submit" className="w-full p-[10px] border cursor-pointer font-bold" variants={backgroundVariant} initial="initial" whileHover="hover">Submit</motion.button>
+      <motion.button type="submit" className="w-full p-[10px] border cursor-pointer font-bold" variants={buttonBackgroundVariant} initial="initial" whileHover="hover">Submit</motion.button>
   </Form>
  );
 };

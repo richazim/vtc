@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const ParagraphTag = ({onColumn, title, paragraph} : {onColumn?: boolean, title: string, paragraph: string}) => {
+const ServiceCard = ({onColumn, title, paragraph} : {onColumn?: boolean, title: string, paragraph: string}) => {
     return (
         <div className={`${(onColumn) ? 'flex flex-col' : 'flex flex-row w-full'} w-full bg-gray `}>
             <div className={`${(onColumn) ? 'w-full' : 'w-1/2'} overflow-hidden`}>
@@ -17,4 +17,4 @@ const ParagraphTag = ({onColumn, title, paragraph} : {onColumn?: boolean, title:
     );
 };
 
-export default ParagraphTag;
+export default ServiceCard;

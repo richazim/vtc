@@ -1,4 +1,4 @@
-"use client";
+import { ClientTestimonyCardProps } from "@/types/testimonies";
 import Image from "next/image";
 
 const ClientTestimonyCard = ({
@@ -6,7 +6,7 @@ const ClientTestimonyCard = ({
                          profile,
                          location,
                          comment
-                     } : {name: string, profile: string, location: string, comment: string}) => {
+                     } : ClientTestimonyCardProps) => {
     return (
         <div className="border border-gray-200 bg-gray w-full p-[20px] text-black">
             <div className="lines">

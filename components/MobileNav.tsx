@@ -1,42 +1,69 @@
-"use client"
-import { motion } from 'framer-motion';
-import {usePathname} from "next/navigation";
-import {useState} from "react";
-import {HomeNavItems} from "@/constants";
-import CustomizedLink from "@/components/CustomizedLink";
+"use client";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import Curve from "@/components/Curve";
-
-export const menuSlide = {
-    initial: {x: "calc(100% + 100px)"},
-    enter: {x: "0", transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1]}},
-    exit: {x: "calc(100% + 100px)", transition: {duration: 0.8, ease: [0.76, 0, 0.24, 1]}}
-}
+import { links } from "@/data/links";
+import { mobileMenuItemSlideInVariant, mobileMenuSlideInVariant } from "@/lib/motion/slide_in";
+import Link from "next/link";
+import { buttonScaleVariant } from "@/lib/motion/scale";
 
 const MobileNav = () => {
-    const pathname = usePathname();
-    const [selectedIndicator, setSelectedIndicator] = useState(pathname);
+  const [hoveredHref, setHoveredHref] = useState<string | null>(null);
 
-    return (
-        <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className='nav-menu -z-10'>
-            <div className='nav-body'>
-                <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className='nav-nav '>
+  return (
+    <motion.div
+      variants={mobileMenuSlideInVariant}
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      className="h-[100vh] fixed top-0 right-0 text-white bg-yellow -z-10"
+    >
 
-                    <div className='nav-header'>
-                        <p>Menu</p>
-                    </div>
+      <div className="box-border h-[100%] w-[100%] p-[100px] flex flex-colum justify-center">
+        <div
+          onMouseLeave={() => {
+            setHoveredHref(null);
+          }}
+          className="flex flex-col text-[56px] gap-[12px] mt-[20px]"
+        >
+          <div className="text-[#999] border-b border-[#999] uppercase text-[11px] mb-[40px]">
+            <p>Menu</p>
+          </div>
 
-                    {
-                        HomeNavItems.map( (data, index) => {
-                            return <CustomizedLink key={index} data={{...data, index}} isActive={selectedIndicator == data.link} setSelectedIndicator={setSelectedIndicator}></CustomizedLink>
-                        })
-                    }
+          {links.home.sections.map((homeSection, index) => {
+            return (
+                <motion.div
+                  className="relative flex items-center"
+                  key={index}
+                  onMouseEnter={() => {
+                    setHoveredHref(homeSection.href);
+                  }}
+                  custom={index}
+                  variants={mobileMenuItemSlideInVariant}
+                  initial="initial"
+                  animate="enter"
+                  exit="exit"
+                >
+                  
+                    <motion.div
+                      variants={buttonScaleVariant}
+                      animate={hoveredHref === homeSection.href ? "open" : "closed"}
+                      className="absolute left-[-30px] w-[10px] h-[10px] bg-white rounded-full"
+                    ></motion.div>
 
-                </div>
-            </div>
+                    <Link href={`/${homeSection.href}`}>{homeSection.label}</Link>
 
-            <Curve />
-        </motion.div>
-    );
+                </motion.div>
+
+            );
+          })}
+        </div>
+      </div>
+
+      <Curve />
+
+    </motion.div>
+  );
 };
 
 export default MobileNav;

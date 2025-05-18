@@ -3,6 +3,7 @@
 import Image from "next/image";
 
 const SocialMedias = () => {
+    
     return (
         <div className="flex flex-row gap-[15px]">
             <Image src="/assets/icons/twitter.svg" alt="twitter icon" width={24} height={24}/>

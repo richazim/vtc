@@ -110,7 +110,7 @@ export const MyMultiStepForm = () => {
                   Back
                 </Button>
                 <Button type="submit" size="sm" className="font-medium">
-                  {step === 2 ? 'Submit' : 'Next'}
+                  {step as number === 2 ? 'Submit' : 'Next'}
                 </Button>
               </div>
             </form>
@@ -138,12 +138,12 @@ export const MyMultiStepForm = () => {
                   className="font-medium"
                   size="sm"
                   onClick={handleBack}
-                  disabled={step === 0}
+                  disabled={step as number === 0}
                 >
                   Back
                 </Button>
                 <Button type="submit" size="sm" className="font-medium">
-                  {step === 2 ? 'Submit' : 'Next'}
+                  {step as number === 2 ? 'Submit' : 'Next'}
                 </Button>
               </div>
             </form>
@@ -171,7 +171,7 @@ export const MyMultiStepForm = () => {
                   className="font-medium"
                   size="sm"
                   onClick={handleBack}
-                  disabled={step === 0}
+                  disabled={step as number === 0}
                 >
                   Back
                 </Button>

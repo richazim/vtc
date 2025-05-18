@@ -1,29 +1,6 @@
 "use client"
 import ClientTestimonyCard from "@/components/ClientTestimonyCard";
-
-const clientComments = [
-    {
-        name: 'Force Bernard C.',
-        profile: '/assets/images/thumbnail-profile.png',
-        profession: 'Founder of Marjan',
-        location: 'Marjan',
-        comment: 'Azim! I like him so much. He is kind guy always funny. But his good part is he is very serious when he works. I tell him to make me a mobile application. Guess what! Not only he make it but also he make it more better.',
-    },
-    {
-        name: 'Force Bernard C.',
-        profile: '/assets/images/thumbnail-profile.png',
-        profession: 'Founder of Marjan',
-        location: 'Marjan',
-        comment: 'Azim! I like him so much. He is kind guy always funny. But his good part is he is very serious when he works. I tell him to make me a mobile application. Guess what! Not only he make it but also he make it more better.',
-    },
-    {
-        name: 'Force Bernard C.',
-        profile: '/assets/images/thumbnail-profile.png',
-        profession: 'Founder of Marjan',
-        location: 'Marjan',
-        comment: 'Azim! I like him so much. He is kind guy always funny. But his good part is he is very serious when he works. I tell him to make me a mobile application. Guess what! Not only he make it but also he make it more better.',
-    }
-]
+import { clientComments } from "@/data/comments";
 
 const Testimonies = () => {
     return (

@@ -13,7 +13,7 @@ const Reservation = () => {
           </section>
 
           <section className="relative w-screen lg:w-[50%] bg-gray-300 flex flex-col gap-[30px] items-center pt-[100px]">
-              <h3 className="text-6xl">Reservation</h3>
+              <h3 className="text-6xl">Find out</h3>
               <MyMultiStepForm/>
           </section>
       </div>

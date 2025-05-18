@@ -3,7 +3,7 @@ import HomeNav from "@/components/HomeNav";
 import Terms from "@/sections/Terms";
 import Reservation from "@/sections/Reservation";
 
-const Page = () => {
+const PriceEstimatorPage = () => {
     return (
         <div id="reservation">
             <SafeArea>
@@ -15,4 +15,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default PriceEstimatorPage;

@@ -5,7 +5,6 @@ import SocialMedias from "@/components/SocialMedias";
 
 const About = () => {
 
-
     return (
         <div id="about" className="section w-screen h-padding padding-top-nav padding-bottom-nav overflow-hidden bg-black">
 
@@ -15,8 +14,9 @@ const About = () => {
                 </section>
 
                 <section className="lg:w-[50%] w-full text-white flex flex-col gap-[30px] items-center">
-                    {/*<p>À Propos</p>*/}
+                    
                     <h2 className="text-center text-5xl text-gray font-bold">Qui suis-je?</h2>
+
                     <div className="h-padding  flex flex-col gap-[15px] text-[15px] bg-[#DD9375] text-black">
                         <p className="p-[10px]">Chauffeur vtc privée basé à Angers Passionné par mon métier, je mets mon expérience et mon professionnalisme à votre service pour vous garantir des trajets confortables, sécurisés et agréables.</p>
                         <p className="p-[10px]">Fort d’une solide connaissance des routes angevines et des environs, je vous assure une prise en charge ponctuelle et un itinéraire optimisé pour vos déplacements personnels ou professionnels.</p>

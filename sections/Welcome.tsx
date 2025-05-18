@@ -1,15 +1,11 @@
 "use client";
-import { useRef } from "react";
-
 import HomeRotatingText from "@/components/HomeRotatingText";
 import BackgroundCarousel from "@/components/BackgroundCarousel";
 
 const Welcome = () => {
-    const sectionRef = useRef(null);
-    
 
     return (
-        <header ref={sectionRef} id="welcome" className="section -z-10 relative w-full h-screen flex flex-row overflow-hidden">
+        <header id="welcome" className="section -z-10 relative w-full h-screen flex flex-row overflow-hidden">
             <section className="lg:w-[50%] lg:flex hidden lg:flex-row lg:items-center bg-gray">
                 <HomeRotatingText/>
             </section>
