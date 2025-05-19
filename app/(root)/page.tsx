@@ -1,4 +1,4 @@
-import Root from "@/pages/Root";
+import Root from "@/pages/RootPage";
 
 export default function Home() {
   return (

@@ -11,14 +11,14 @@ export default function HomeRotatingText() {
         const words = wordsRef.current;
         const wordHeight = container!.clientHeight / words.length;
 
-        const timeline = gsap.timeline({ // Créer une timeline d'animations où chaque animation est enchaînée.
+        const timeline = gsap.timeline({ 
             repeat: -1,
             defaults: { ease: "power2.inOut" }
         });
 
         words.forEach((item, index) => {
             if(index < words.length - 1){
-                timeline.to(container, { // Etat final A Atteindre
+                timeline.to(container, { 
                     y: `-=${wordHeight}px`,
                     duration: 1
                 });
@@ -32,7 +32,7 @@ export default function HomeRotatingText() {
     }, []);
 
     return (
-        <div className="relative h-40 flex items-center justify-center h-margin-left w-full">
+        <div className="relative h-40 flex items-center justify-center w-full">
             <h1 className="xl:text-3xl lg:text-2xl">
                 MrVTC, c’est{" "}
 
@@ -46,7 +46,7 @@ export default function HomeRotatingText() {
                                     wordsRef.current[index] = el;
                                 }
                             }}
-                            className={`rotating-word text-left font-bold inline-block`}
+                            className={`text-left font-bold inline-block [&:nth-of-type(2n-1)]:text-yellow`}
                         >
                             {word}
                         </div>
@@ -57,3 +57,8 @@ export default function HomeRotatingText() {
         </div>
     );
 }
+
+// Defilement de mots avec gsap:
+// Pendant chaque seconde, prendre le mot visible actuel et le déplacer vers le haut (la zone non visible)
+// A la fin des mots, prendre le conteneur de tous ces mots et le redescendre vers le bas de la zone visible (pendant une seconde)
+// Le processus est repété infiniment

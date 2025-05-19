@@ -4,13 +4,13 @@ import Lenis from "lenis";
 import {gsap} from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Welcome from "@/sections/Welcome";
-import About from "@/sections/About";
+import Welcome from "@/sections/WelcomeSection";
+import About from "@/sections/AboutSection";
 import HomeNav from "@/components/HomeNav";
-import Services from "@/sections/Services";
-import Testimonies from "@/sections/Testimonies";
-import Contact from "@/sections/Contact";
-import Terms from "@/sections/Terms";
+import Services from "@/sections/ServicesSection";
+import Testimonies from "@/sections/TestimoniesSection";
+import Contact from "@/sections/ContactSection";
+import Terms from "@/sections/TermsSection";
 import SafeArea from "@/components/SafeArea";
 import 'lenis/dist/lenis.css'
 

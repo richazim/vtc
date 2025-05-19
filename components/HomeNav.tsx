@@ -17,9 +17,9 @@ const HomeNav = () => {
         const stick = () => {
             const scrollTop = window.scrollY;
             if(scrollTop >= 70){
-                headerRef.current?.classList.add('is-sticky')
+                headerRef.current?.classList.add("bg-[#F7F4ED]")
             }else{
-                headerRef.current?.classList.remove('is-sticky')
+                headerRef.current?.classList.remove('bg-[#F7F4ED]')
             }
         };
 
@@ -42,7 +42,7 @@ const HomeNav = () => {
     return (
         <div className="fixed top-0 left-0 w-screen flex flex-row justify-center z-10">
             <div className="absolute 2xl:w-[1280px] w-screen">
-                <div ref={headerRef} className="header-section flex flex-row justify-between items-center nav-height h-padding relative">
+                <div ref={headerRef} className="header-section flex flex-row justify-between items-center tansition h-[70px] md:px-[80px] px-[20px] relative">
 
                     <div className="relative font-bold">
                         <span className="after:content-[''] after:absolute after:w-[5px] after:h-[5px] after:bg-yellow after:bottom-[5px] after:rounded-full">MrVTC</span>
@@ -68,7 +68,7 @@ const HomeNav = () => {
                         <span>Trajectoire</span>
                     </Link>
 
-                    <div className="block xl:hidden header">
+                    <div className="block xl:hidden header z-30">
                         <button className="w-[50px] h-[50px] rounded-full bg-[var(--color-yellow)] cursor-pointer flex justify-center items-center" onClick={() => {setIsActive(!isActive)}}>
                             <div className="flex flex-col items-center relative">
                                 <span className={"absolute h-[1px] w-[20px] rounded-full bg-white transition-transform  " + `${isActive ? ' rotate-45' : 'top-[-5px]'}`}></span>

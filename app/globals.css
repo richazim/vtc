@@ -7,9 +7,6 @@
   /*--font-sans: var(--font-geist-sans);*/
   /*--font-mono: var(--font-geist-mono);*/
   --color-yellow: #FFC108;
-  --color-gray: #F7F4ED;
-  --nav-height: 70px;
-  --nav-height-for-padding: 80px;
 }
 
 body {
@@ -22,41 +19,22 @@ body {
   scroll-behavior: smooth;
 }
 
-/*Website Horizontal Padding*/
-.h-padding{
-  @apply md:px-[80px] px-[20px];
+                /* GLOBAL APP CSS CLASSES */
+/* App Default Vertical Padding  */
+.app-default-padding-left{
+  @apply md:pl-[80px] pl-[20px];
 }
 
-.h-margin-left{
-  @apply md:ml-[80px] ml-[20px];
+.app-default-padding-right{
+  @apply md:pr-[80px] pr-[20px];
 }
 
-/* Website Header Nav */
-.nav-height{
-  height: var(--nav-height);
-  transition: background 0.2s;
-}
+/* App Default Padding Top*/
 
-.padding-top-nav{
+.app-default-padding-top{
   padding-top: var(--nav-height-for-padding);
 }
-
-.padding-bottom-nav{
-  padding-bottom: var(--nav-height-for-padding);
-}
-
-.is-sticky{
-  background: var(--color-gray);
-}
-
-/*Website Nav Menu Button*/
-
-/*Mobile Nav Menu*/
-
-/* Header Rotating Words */
-.rotating-word:nth-of-type(2n-1){
-  color: var(--color-yellow);
-}
+              /* END GLOBAL APP CSS CLASSES */
 
 /* Inputs */
 input, textarea{

@@ -35,15 +35,13 @@ export default function BackgroundCarousel() {
         </section>
     );
 }
+
+// Défilement d'images
+
 // Les images sont superposées au debut
-
 // Le premier image d'index 0 est rendu opaque et les autres rendu transparent
-
 // Le timeline doit animer la section que les images couvrent
-
 // Pour chaque 4s le timeline rend opaque l'image suivante et rend transparent l'image actuel
-
 // Pour chaque 4s le timeline anime la section (pour considérer le changement d'apparition et de disparition apporté sur lui)
-
 // Lecon: Indiquer au timeline de gsap de se repeter infiniment sait lui dire de refaire les meme choses qu'on a branché sur lui.
 

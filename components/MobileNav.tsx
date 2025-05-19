@@ -16,7 +16,7 @@ const MobileNav = () => {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="h-[100vh] fixed top-0 right-0 text-white bg-yellow -z-10"
+      className="h-[100vh] fixed top-0 right-0 text-white bg-yellow z-20"
     >
 
       <div className="box-border h-[100%] w-[100%] p-[100px] flex flex-colum justify-center">
