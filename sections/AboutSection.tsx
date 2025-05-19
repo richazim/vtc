@@ -6,22 +6,25 @@ const About = () => {
   return (
     <div
       id="about"
-      className="section w-screen mt-[70px] app-default-padding-left app-default-padding-right padding-top-nav padding-bottom-nav bg-[#333333]"
+      className="section w-screen mt-[70px] app-default-padding-left app-default-padding-right padding-top-nav app-default-padding-top pb-20 mb-20 bg-[#333333]"
     >
       <div className="flex lg:flex-row flex-col gap-[30px] lg:gap-0">
-        <section className="lg:w-[50%] w-full border">
-          <Image
-            src={ManPicture}
-            priority
-            alt="Man"
-            width={5760}
-            height={3840}
-            placeholder="blur"
-            className="object-cover w-full h-full"
-          />
+
+        <section className="lg:w-[50%] w-full relative hidden lg:block">
+          <div className="absolute right-0 w-[40vw] h-[50vw] xl:h-[40vw] overflow-hidden">
+            <Image
+              src={ManPicture}
+              priority
+              alt="Man"
+              placeholder="blur"
+              sizes="(max-width: 768px) 20rem, 25rem"
+              fill={true}
+              className="object-cover grayscale"
+            />
+          </div>
         </section>
 
-        <section className="lg:w-[50%] w-full text-white flex flex-col text-left">
+        <section className="lg:w-[50%] w-full text-white flex flex-col text-left pl-20">
           <div className="flex flex-col gap-[5px]">
               <h2 className=" text-yellow">
                 Chauffeur privé VTC Lille

@@ -32,7 +32,7 @@ body {
 /* App Default Padding Top*/
 
 .app-default-padding-top{
-  padding-top: var(--nav-height-for-padding);
+  padding-top: 80px;
 }
               /* END GLOBAL APP CSS CLASSES */
 
