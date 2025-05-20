@@ -9,8 +9,8 @@ export const links = {
         { label: 'Contact', href: '#contact'}
       ],
     },
-    price_estimator: {
-      path: '/price-estimator',
+    reservation: {
+      path: '/reservation',
       label: 'Estimateur de Prix',
       sections: [],
     }

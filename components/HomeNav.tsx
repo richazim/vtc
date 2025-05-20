@@ -45,7 +45,9 @@ const HomeNav = () => {
                 <div ref={headerRef} className="header-section flex flex-row justify-between items-center tansition h-[70px] md:px-[80px] px-[20px] relative">
 
                     <div className="relative font-bold">
+                        <Link href={links.home.path} className="">
                         <span className="after:content-[''] after:absolute after:w-[5px] after:h-[5px] after:bg-yellow after:bottom-[5px] after:rounded-full">MrVTC</span>
+                        </Link>
                     </div>
 
                     <div className="xl:flex flex-row justify-between items-center w-[60%] hidden">
@@ -64,8 +66,8 @@ const HomeNav = () => {
                         }
                     </div>
 
-                    <Link href={links.price_estimator.path} className="reservation py-[10px] px-[27px] font-semibold text-white bg-yellow rounded-full">
-                        <span>Trajectoire</span>
+                    <Link href={links.reservation.path} className="reservation py-[10px] px-[27px] font-semibold text-white bg-yellow rounded-full">
+                        <span>Reservez</span>
                     </Link>
 
                     <div className="block xl:hidden header z-30">
