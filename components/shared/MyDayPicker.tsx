@@ -2,7 +2,7 @@ import { useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 
-function MyDatePicker() {
+function MyDayPicker() {
   const [selected, setSelected] = useState<Date>();
 
   return (
@@ -17,4 +17,4 @@ function MyDatePicker() {
   );
 }
 
-export default MyDatePicker;
+export default MyDayPicker;

@@ -46,20 +46,20 @@ const HomeNav = () => {
 
                     <div className="relative font-bold">
                         <Link href={links.home.path} className="">
-                        <span className="after:content-[''] after:absolute after:w-[5px] after:h-[5px] after:bg-yellow after:bottom-[5px] after:rounded-full">MrVTC</span>
+                            <span className="after:content-[''] after:absolute after:w-[5px] after:h-[5px] after:bg-yellow after:bottom-[5px] after:rounded-full">MrVTC</span>
                         </Link>
                     </div>
 
                     <div className="xl:flex flex-row justify-between items-center w-[60%] hidden">
                         {
                             links.home.sections.map((item) => (
-                                <Link key={item.label} href={`/${item.href}`} className="anchor-link">
+                                <Link key={item.label} href={`/${item.href}`} className="text-yellow">
                                     <motion.div
                                         whileHover="hover"
                                         variants={navLinkBackgroundVariant}
                                         className="py-[5px] px-[20px] mx-[20px] rounded-full"
                                     >
-                                        <span className="font-bold">{item.label}</span>
+                                        <span>{item.label}</span>
                                     </motion.div>
                                 </Link>
                             ))

@@ -28,7 +28,7 @@ export default function BackgroundCarousel() {
                     src={src}
                     alt={`Background ${index}`}
                     fill
-                    className={`absolute object-cover transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"}`}
+                    className={`absolute object-cover grayscale transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"}`}
                     priority={index === 0} 
                 /> 
             ))}

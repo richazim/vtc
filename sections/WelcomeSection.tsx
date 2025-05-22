@@ -8,6 +8,7 @@ const Welcome = () => {
         <header id="welcome" className="section -z-10 relative w-full h-screen flex flex-row overflow-hidden">
             <section className="lg:w-[50%] lg:flex hidden lg:flex-row lg:items-center bg-gray">
                 <HomeRotatingText/>
+                <div className="absolute h-full w-full z-[-1] overflow-hidden bg-[#333333]"></div>
             </section>
 
             <section className="relative h-screen w-screen lg:w-[50%] bg-gray-300">

@@ -5,7 +5,7 @@ import Reservation from "@/sections/ReservationSection";
 
 const PriceEstimatorPage = () => {
     return (
-        <div id="reservation">
+        <div id="reservation" className="">
             <SafeArea>
                 <HomeNav/>
                 <Reservation/>
